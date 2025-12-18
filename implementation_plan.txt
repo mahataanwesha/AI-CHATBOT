@@ -1,0 +1,75 @@
+Implementation Plan and Tech Stack Details
+======================================
+
+This document explains how this AI Health Chatbot is built and what tools are used, in simple and easy-to-understand language.
+
+1. Implementation Plan (Step-by-Step)
+-------------------------------------
+
+We built this app in stages, like building a house. Here are the steps:
+
+Step 1: Setting Up the Foundation
+- We started by creating a main folder for our project.
+- We installed "Node.js", which is the engine that runs our server (the brain of the app).
+- We also installed specific tools (libraries) we need, like "Express" (to handle web requests) and "Twilio" (to send messages).
+
+Step 2: Creating the Memory (Database)
+- We set up a simple database using "SQLite". Think of this as a digital notebook.
+- We created pages in this notebook (tables) to save:
+  - User details (Name, Age, Language).
+  - Health questions asked by users.
+  - Emergency alerts (when someone is very sick).
+
+Step 3: Building the Server (The Brain)
+- We wrote a file called `server.js`. This is where the app actually runs.
+- The server listens for messages coming from WhatsApp or SMS.
+- It acts like a receptionist: when a message comes in, it decides where to send it.
+
+Step 4: Making the Chatbot Smart (Bot Logic)
+- We created `bot.js`. This is the script that decides what to say back to you.
+- It uses a "Flow" system. For example:
+  - First, it asks for your language.
+  - Then, it asks for your name and age.
+  - Finally, it shows you a menu (Ask Question, Get Tips, etc.).
+- It remembers where you are in the conversation so it doesn't get confused.
+
+Step 5: Adding Artificial Intelligence (The Brain Upgrade)
+- We connected our bot to "Google Gemini". This is a super-smart AI.
+- When you ask a health question (like "I have a headache"), the bot sends it to Gemini.
+- Gemini writes a helpful answer, and the bot sends it back to you on WhatsApp.
+
+Step 6: Building the Dashboard (The Control Center)
+- We made a website for doctors or admins to see what is happening.
+- We used a tool called "React" to build this.
+- The dashboard shows charts/graphs of how many people are using the bot and a list of all registered users.
+
+Step 7: Connecting to the Outside World
+- Since our server runs on a personal computer, the outside world (like WhatsApp) can't see it.
+- We used a tool called "Ngrok" or "Localtunnel" to create a secure tunnel. This lets WhatsApp send messages to our computer safely.
+
+------------------------------------------------------------------
+
+2. Tech Stack (Tools Used) - In Detail
+------------------------------------------------------------------
+
+Here is a list of the specific technologies we used and why we chose them.
+
+A. Backend (The Engine Room)
+   - **Node.js**: The software that lets us run JavaScript code on a computer/server. It's fast and handles many messages at once.
+   - **Express.js**: A framework that makes using Node.js easier. It helps us organize our code into "routes" (paths) for different tasks.
+   - **SQLite**: A lightweight database. It stores data in a single file on your computer, so it's very easy to set up and doesn't need a big, complex server.
+
+B. AI & Intelligence
+   - **Google Gemini (Generative AI)**: This is the AI model we use. It understands human language and can answer complex health questions intelligently.
+
+C. Communication (Messaging)
+   - **Twilio**: A service that lets our code send and receive SMS and WhatsApp messages. It acts as the bridge between our code and your phone.
+
+D. Frontend / Dashboard (The Visual Part)
+   - **React.js**: A popular tool for building websites. It allows us to make the dashboard interactive (buttons click, pages change instantly).
+   - **Vite**: A tool that helps us build and run the React website very quickly.
+   - **Material UI (@mui/material)**: A collection of pre-designed buttons, boxes, and layouts. It makes our dashboard look professional and beautiful without us having to design every single pixel.
+   - **Recharts**: A library used to draw the colorful graphs and charts on the dashboard.
+
+E. Tools for Connectivity
+   - **Ngrok / Localtunnel**: These are "Tunneling Services". They give our local computer a temporary web address (public URL) so services like Twilio can reach us while we are developing.
