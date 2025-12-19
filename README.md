@@ -57,7 +57,7 @@ Follow the steps below to start using the chatbot on WhatsApp:
 - You can name the contact something like AI Chatbot for easy identification.
 
 **Connect to Twilio Sandbox**
-- Open WhatsApp and send the verification code **join knew-its** to the saved number.
+- Open WhatsApp and send the verification code **"join knew-its"** to the saved number.
 - This step connects your WhatsApp account to the Twilio Sandbox.
 
 **Start the Chatbot**
