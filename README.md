@@ -47,3 +47,21 @@ node test_bot.js
 - `bot.js`: Chatbot state machine and logic.
 - `utils/translations.js`: Language data.
 - `services/geminiService.js`: AI interaction logic.
+
+## Accessing the Chatbot via WhatsApp
+
+Follow the steps below to start using the chatbot on WhatsApp:
+
+**Save the WhatsApp Number**
+Save the WhatsApp number **+14155238886** on your phone.
+You can name the contact something like AI Chatbot for easy identification.
+
+**Connect to Twilio Sandbox**
+Open WhatsApp and send the verification code **join knew-its** to the saved number.
+This step connects your WhatsApp account to the Twilio Sandbox.
+
+**Start the Chatbot**
+Once connected, send "**HI**" to the chatbot.
+
+**Ask Your Questions**
+You can now access the chatbot through WhatsApp and ask questions related to your health doubts.
